@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prb.ShirtsAndPants.Wpf", "Prb.ShirtsAndPants.Wpf\Prb.ShirtsAndPants.Wpf.csproj", "{3E12E0AB-6C6B-4409-85C2-F4B2A849C8FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prb.ShirtsAndPants.Core", "Prb.ShirtsAndPants.Core\Prb.ShirtsAndPants.Core.csproj", "{D22934C7-E7A9-4C99-8728-90549317BA9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E12E0AB-6C6B-4409-85C2-F4B2A849C8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E12E0AB-6C6B-4409-85C2-F4B2A849C8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E12E0AB-6C6B-4409-85C2-F4B2A849C8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E12E0AB-6C6B-4409-85C2-F4B2A849C8FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D22934C7-E7A9-4C99-8728-90549317BA9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D22934C7-E7A9-4C99-8728-90549317BA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D22934C7-E7A9-4C99-8728-90549317BA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D22934C7-E7A9-4C99-8728-90549317BA9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AD53B4C-AB76-4CB4-A21E-C84ABF10B468}
+	EndGlobalSection
+EndGlobal

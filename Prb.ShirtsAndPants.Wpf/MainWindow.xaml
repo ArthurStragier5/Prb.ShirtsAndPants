@@ -1,0 +1,60 @@
+﻿<Window x:Class="Prb.ShirtsAndPants.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prb.ShirtsAndPants.Wpf"
+        mc:Ignorable="d"
+         Title="PE03 : Pants &amp; Shirts" Height="796" Width="910" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox x:Name="grpCustomer" Header="Klanten" HorizontalAlignment="Left" Height="331" Margin="28,25,0,0" VerticalAlignment="Top" Width="857">
+            <Grid>
+                <ListBox x:Name="lstCustomers" HorizontalAlignment="Left" Height="255" Margin="10,43,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="lstCustomers_SelectionChanged" />
+                <Label Content="Klantenbestand" HorizontalAlignment="Left" Height="30" Margin="10,8,0,0" VerticalAlignment="Top" Width="142"/>
+                <GroupBox Header="Klant details" HorizontalAlignment="Left" Height="282" Margin="168,16,0,0" VerticalAlignment="Top" Width="326">
+                    <Grid>
+                        <Label Content="Voornaam :" HorizontalAlignment="Left" Height="30" Margin="10,8,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Label Content="Familienaam :" HorizontalAlignment="Left" Height="30" Margin="10,43,0,0" VerticalAlignment="Top" Width="92"/>
+                        <Label Content="Gemeente :" HorizontalAlignment="Left" Height="30" Margin="10,73,0,0" VerticalAlignment="Top" Width="92"/>
+                        <Label Content="Geslacht :" HorizontalAlignment="Left" Height="30" Margin="10,108,0,0" VerticalAlignment="Top" Width="92"/>
+                        <Label Content="Maat hemd :" HorizontalAlignment="Left" Height="30" Margin="10,143,0,0" VerticalAlignment="Top" Width="92"/>
+                        <Label Content="Maat broek :" HorizontalAlignment="Left" Height="30" Margin="10,178,0,0" VerticalAlignment="Top" Width="92"/>
+                        <TextBox x:Name="txtFirstName" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="102,8,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+                        <TextBox x:Name="txtLastName" IsEnabled="False" HorizontalAlignment="Left" Height="24" Margin="102,46,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+                        <TextBox x:Name="txtCity" IsEnabled="False" HorizontalAlignment="Left" Height="24" Margin="102,79,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+                        <RadioButton x:Name="rdbMale" Content="Man" IsEnabled="False" HorizontalAlignment="Left" Height="15" Margin="102,116,0,0" VerticalAlignment="Top" Width="65"/>
+                        <RadioButton x:Name="rdbFeMale" Content="Vrouw" IsEnabled="False" HorizontalAlignment="Left" Height="15" Margin="184,116,0,0" VerticalAlignment="Top" Width="65"/>
+                        <ComboBox x:Name="cmbShirtSize" HorizontalAlignment="Left" Height="26" Margin="107,143,0,0" VerticalAlignment="Top" Width="188" />
+                        <ComboBox x:Name="cmbPantsSize" HorizontalAlignment="Left" Height="26" Margin="107,182,0,0" VerticalAlignment="Top" Width="188" />
+                        <Button x:Name="btnUpdateSizes" Content="Werk maten bij" HorizontalAlignment="Left" Height="28" Margin="157,221,0,0" VerticalAlignment="Top" Width="138" Click="btnUpdateSizes_Click" />
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Historiek verkopen" HorizontalAlignment="Left" Height="232" Margin="510,16,0,0" VerticalAlignment="Top" Width="326">
+                    <Grid>
+                        <ListBox x:Name="lstSalesHistory" HorizontalAlignment="Center" Height="121" VerticalAlignment="Center" Width="294"/>
+                        <Label x:Name="lblTotalCustomerSales" Content="0,00" HorizontalContentAlignment="Right" HorizontalAlignment="Center" Height="31" Margin="0,172,0,0" VerticalAlignment="Top" Width="294"/>
+                    </Grid>
+                </GroupBox>
+                <Button x:Name="btnNewSale" Content="&lt;&lt;&lt; NIEUWE VERKOOP STARTEN >>>" Background="ForestGreen" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Height="30" Margin="510,253,0,0" VerticalAlignment="Top" Width="326" Click="btnNewSale_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpSales" Header="Verkopen" HorizontalAlignment="Left" Height="364" Margin="28,355,0,0" VerticalAlignment="Top" Width="665" IsEnabled="False">
+            <Grid>
+                <Label Content="Merk hemd :" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="92"/>
+                <Label Content="Merk broek :" HorizontalAlignment="Left" Height="30" Margin="10,45,0,0" VerticalAlignment="Top" Width="92"/>
+                <ComboBox x:Name="cmbShirtBrand" HorizontalAlignment="Left" Height="26" Margin="102,10,0,0" VerticalAlignment="Top" Width="188"/>
+                <ComboBox x:Name="cmbPantsBrand" HorizontalAlignment="Left" Height="26" Margin="102,45,0,0" VerticalAlignment="Top" Width="188"/>
+                <Button x:Name="btnSellShirt" Content="Verkoop hemd" HorizontalAlignment="Left" Height="26" Margin="542,10,0,0" VerticalAlignment="Top" Width="106" Click="btnSellShirt_Click" />
+                <Button x:Name="btnSellPants" Content="Verkoop broek" HorizontalAlignment="Left" Height="26" Margin="542,49,0,0" VerticalAlignment="Top" Width="106" Click="btnSellPants_Click" />
+                <Label x:Name="lblCustomerShirtSize" Content="-" Background="SteelBlue" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="295,10,0,0" VerticalAlignment="Top" Width="127"/>
+                <Label x:Name="lblCustomerPantsSize" Content="-"  Background="SteelBlue" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="295,45,0,0" VerticalAlignment="Top" Width="127"/>
+                <Label Content="Verkoopsprijs" HorizontalAlignment="Left" Height="30" Margin="434,7,0,0" VerticalAlignment="Top" Width="92"/>
+                <TextBox x:Name="txtSellingPrice" TextAlignment="Right" HorizontalAlignment="Left" Height="26" Margin="427,45,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
+                <ListBox x:Name="lstSales" HorizontalAlignment="Left" Height="233" Margin="10,98,0,0" VerticalAlignment="Top" Width="335"/>
+                <Button x:Name="btnCloseSale" Content="Afrekenen" Background="LimeGreen" Foreground="White" HorizontalAlignment="Left" Height="35" Margin="366,161,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="159" Click="btnCloseSale_Click" />
+                <Button x:Name="btnCancelSale" Content="Verkoop annuleren" Background="Tomato" Foreground="White" HorizontalAlignment="Left" Height="33" Margin="366,210,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="159" Click="btnCancelSale_Click" />
+                <Label x:Name="lblRegisterTotal" Content="0" HorizontalContentAlignment="Right" FontWeight="Bold" HorizontalAlignment="Left" Height="28" Margin="368,100,0,0" VerticalAlignment="Top" Width="158"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
